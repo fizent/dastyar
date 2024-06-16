@@ -1,0 +1,83 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: IranSans
+}
+@font-face {
+    font-family: estedad;
+    src: url(../fonts/Estedad-v5.0-Fontjo.com/woff2/Estedad-Thin.woff2);
+    src: url(../fonts/Estedad-v5.0-Fontjo.com/woff2/Estedad-Bold.woff2);
+   
+}
+
+
+body {
+	background: url(../image/background_dastyar.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#heading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 60px;
+	height: 100px;
+	color: #6363e4;
+}
+
+#heading h1 {
+	font-weight: bold;
+	font-size: 50px;
+}
+
+#ascii {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 100px;
+	color: rgb(157, 190, 249);
+}
+
+#infos {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.info-box {
+	text-align: center;
+	width: 20%;
+	border: 1px solid #ccc;
+}
+
+.info-box h3 {
+	background: #b9e9ff;
+	border-bottom: 2px solid #b9e9ff;
+	padding: 5px;
+	font-weight: bold;
+}
+
+.info-box h2 {
+	background: #fff;
+	padding: 5px;
+}
+
+#heading, #ascii, #infos {
+	display: none;
+}
+
+#starter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	font-weight: bolder;
+	height: 100vh;
+}
+
+#starter #starter-text {
+	background: #fff;
+	padding: 10px;
+	filter: none;
+}

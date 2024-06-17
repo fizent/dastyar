@@ -1,13 +1,13 @@
-﻿let $ = document
-let startError = $.querySelector(".start-error")
-let locationKey = $.querySelector('#location')
-let title = $.querySelector('title')
-let hkey = $.querySelector("#key")
-let hlocation = $.querySelector("#location")
-let hwich = $.querySelector("#which")
-let hdcode = $.querySelector("#code")
-let h_head = $.querySelector("#keyCode")
-let heading_div = $.querySelector("#heading")
+﻿const $ = document
+const startError = $.querySelector(".start-error")
+const locationKey = $.querySelector('#location')
+const title = $.querySelector('title')
+const hkey = $.querySelector("#key")
+const hlocation = $.querySelector("#location")
+const hwich = $.querySelector("#which")
+const hdcode = $.querySelector("#code")
+const h_head = $.querySelector("#keyCode")
+const heading_div = $.querySelector("#heading")
 
 let body_key_down = document.body.addEventListener('keydown', function (event) {
 	console.log(event);
@@ -30,7 +30,7 @@ let body_key_press = document.body.addEventListener('keypress', function (event)
 
 
 function time_error() {
-	let div_error = document.createElement('div')
+	const div_error = document.createElement('div')
 	div_error.style.backgroundColor = 'blue'
 	div_error.style.color = 'white'
 	div_error.innerHTML = '!یک چیزی وارد کن'

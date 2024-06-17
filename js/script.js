@@ -27,7 +27,7 @@ function Change_btn_hide_over() {
     btn_change_hide.innerHTML = 'مخفی کردن'
     btn_change_hide.style.color = 'var(--color-h-gray)'
     btn_change_hide.style.fontWeight = 'var(--font-weight)'
-    let image = document.createElement("img")
+    const image = document.createElement("img")
     image.src = './image/icons8-hide-30.png'
     image.className = 'icon-img-hide'
     btn_change_hide.append(image)
@@ -36,7 +36,7 @@ function Change_btn_hide_over() {
 
 function Change_btn_hide_out() {
     btn_change_hide.innerHTML = ''
-    let imageout = document.createElement("img")
+    const imageout = document.createElement("img")
     imageout.className = 'icon-img-hide'
     imageout.src = './image/icons8-hide-30.png'
     btn_change_hide.append(imageout)
@@ -51,10 +51,10 @@ btn_change_hide.addEventListener("mouseout", Change_btn_hide_out)
 ///////////////////////////////////////////////////////////////// for add to do
 
 function Add_to_do() {
-    let box_to_do = document.createElement("div")
-    let image_icon_trash = document.createElement("img")
+    const box_to_do = document.createElement("div")
+    const image_icon_trash = document.createElement("img")
     let span_to_do = document.createElement("span")
-    let input_value = input_to_do.value
+    const input_value = input_to_do.value
     box_to_do.className = 'box-add-newtask'
     span_to_do.className = 'span_to_do'
     image_icon_trash.src = './image/icons8-trash-22.png'
@@ -82,19 +82,19 @@ function Add_to_do() {
 function Keypress_input(event) {
     if(event.keyCode === 13) {
         
-        let box_to_do = document.createElement("div")
-        let image_icon_trash = document.createElement("img")
+        const box_to_do = document.createElement("div")
+        const image_icon_trash = document.createElement("img")
         let span_to_do = document.createElement("span")
-        let input_value = input_to_do.value
+        const input_value = input_to_do.value
         input_to_do.value = ''
         input_to_do.placeholder = 'نوشتن تسک جدید'
         box_to_do.className = 'box-add-newtask'
-        span_to_do.className = 'span_to_do'
+        span_to_do.className = 'span_to_do'  //// با classlist هم میشه 
         image_icon_trash.src = './image/icons8-trash-22.png'
         span_to_do.innerHTML = input_value
 
         image_icon_trash.addEventListener("click", function() {
-            box_to_do.remove()  ////// فرقش با event ؟؟؟
+            box_to_do.remove()  
         })
         
         height_box.append(box_to_do)
@@ -153,7 +153,7 @@ function SearchEnter() {
 function SearchOut() {
     btn_search.innerHTML = ''
     btn_search.style.padding = '3px 10px 0px 10px';
-    let icon_search = document.createElement("img")
+    const icon_search = document.createElement("img")
     icon_search.style.alignSelf = 'center'
     icon_search.src = './image/icons8-search.svg'
     btn_search.append(icon_search)
@@ -163,8 +163,8 @@ function SearchOut() {
 function SearchUrl(event) {
     if(event.keyCode === 13) {
         event.preventDefault()
-        let resultSearch = search_input.value
-        let move_page_url = `https://www.google.com/search?q=${encodeURIComponent(resultSearch)}`
+        const resultSearch = search_input.value
+        const move_page_url = `https://www.google.com/search?q=${encodeURIComponent(resultSearch)}`
         window.location.href = move_page_url ////// انتقال
     }
 }
@@ -260,8 +260,8 @@ document.body.addEventListener("keydown", keydowns)
 
 function Update_time() {
     let date = new Date()
-    let hour_clock = document.getElementById("hour_o'oclock")
-    let minute_clock = document.getElementById("minute_o'oclock")
+    const hour_clock = document.getElementById("hour_o'oclock")
+    const minute_clock = document.getElementById("minute_o'oclock")
     
     hour_clock.innerHTML = date.getHours()
     minute_clock.innerHTML = date.getMinutes()
@@ -287,8 +287,8 @@ setInterval(Update_time, 1000)
 
 const weekday = ["جمعه", "پنجشنبه", "چهارشنبه", "سه شنبه", "دوشنبه", "یکشنبه", "شنبه"];
 const d = new Date()
-let day = document.getElementById("day")
-let day_week = weekday[d.getDay()]
+const day = document.getElementById("day")
+const day_week = weekday[d.getDay()]
 const months = [
     "دی", "بهمن", "اسفند",
     "فروردین", "اردیبهشت", "خرداد",
@@ -304,8 +304,8 @@ const months = [
 
 
 function Timer_display_container() {
-    let Advertising = document.querySelector(".Advertising")
-    let div_videe = document.querySelector(".div_video")
+    const Advertising = document.querySelector(".Advertising")
+    const div_videe = document.querySelector(".div_video")
     Advertising.classList.add("display_hidden")
     div_videe.classList.add("display_hidden")
     container_input_timer.classList.remove("display_hidden")
@@ -315,32 +315,6 @@ function Timer_display_container() {
 
 
 ////////////////////// درست با هوش مصنوعی
-// function Start_time() {
-//     let hourValue = +hour.value;
-//     let minValue = +min.value;
-//     let secValue = +sec.value;
-
-//     let timer = setInterval(function() {
-//         if(secValue > 0) {
-//             secValue--;
-//         } else if(minValue > 0) {
-//             secValue = 59;
-//             minValue--;
-//         } else if(hourValue > 0) {
-//             minValue = 59;
-//             secValue = 59;
-//             hourValue--;
-//         } else {
-//             clearInterval(timer);
-//         }
-
-//         // به‌روزرسانی نمایش زمان در صفحه
-//         hour.value = hourValue.toString().padStart(2, '0');
-//         min.value = minValue.toString().padStart(2, '0');
-//         sec.value = secValue.toString().padStart(2, '0');
-//     }, 1000);
-// }
-
 
 function Start_time() {
         let hourValue = +hour.value;

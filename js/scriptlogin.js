@@ -1,14 +1,13 @@
 
-let inputs = document.querySelector(".username")
-let passwordUser = document.querySelector(".password")
-let model = document.querySelector(".modal")
-
-let btn_script = document.querySelector(".btn-script-login")
+const inputs = document.querySelector(".username")
+const passwordUser = document.querySelector(".password")
+const model = document.querySelector(".modal")
+const btn_script = document.querySelector(".btn-script-login")
 
 
 function dataValidation() {
-    let inputsValue = inputs.value
-    let userValue = passwordUser.value
+    const inputsValue = inputs.value
+    const userValue = passwordUser.value
 
     if(inputsValue.length < 8 || userValue.length < 12) {
         model.style.display = 'inline'
@@ -29,11 +28,11 @@ function dataValidation() {
 
 btn_script.addEventListener('click', dataValidation)
 
-let user_span = document.querySelector(".span-user")
-let pass_span = document.querySelector(".span-pass")
+const user_span = document.querySelector(".span-user")
+const pass_span = document.querySelector(".span-pass")
 
 function UsertypeUser() {
-    let uservaltype = inputs.value
+    const uservaltype = inputs.value
     if(uservaltype.length < 8) {
         user_span.style.display = 'block'
         user_span.innerHTML = 'please more 8 world'
@@ -51,7 +50,7 @@ function UsertypeUser() {
 inputs.addEventListener('keypress', UsertypeUser)
 
 function UsertypePass() {
-    let userpasstype = passwordUser.value
+    const userpasstype = passwordUser.value
     if(userpasstype.length < 12) {
         pass_span.style.display = 'block'
         pass_span.innerHTML = 'please more 12 world'

@@ -11,7 +11,6 @@ const search_input = document.querySelector(".search-in-google-input")
 const btn_icon_login = document.querySelector(".btn_login")
 const box_servise = document.querySelector(".box-servise")
 const div_context = document.querySelector("#contextMenu")
-const body_task = document.querySelector(".body_task")
 const video_Advertising_div = document.querySelector(".video_Advertising")
 const btn_timer = document.querySelector(".btn-time-temp")
 const container_input_timer = document.querySelector(".container_input_timer")
@@ -122,18 +121,6 @@ function Focuses_input() {
     icon_to_do.style.borderRadius = '8px';
     icon_to_do.style.padding = '10px'
     Keypress_input()
-
-//     let description_more = document.createElement("textarea")
-//     let div_des_input = document.createElement("div")
-//     description_more.placeholder = 'توضیحات بیشتر'
-//     description_more.rows = '2'
-//     description_more.cols = '10'
-//     // div_des_input.style.display = 'flex'
-//     // div_des_input.style.flexDirection = 'column-revers'
-//     div_des_input.append(input_to_do)
-//     div_des_input.append(description_more)
-//     box_input_orginall.append(div_des_input)
-
     
 }
 

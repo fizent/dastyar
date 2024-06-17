@@ -16,6 +16,8 @@ body {
     box-sizing: border-box;
     direction: rtl;
     background: url(../image/background_dastyar.png);
+    display: flex;
+    justify-content: center;
     
     
 }
@@ -74,8 +76,6 @@ body {
   grid-template-columns: repeat(12, 85px);
   grid-template-rows: repeat(8, 85px);
   gap: 8px;
-  margin-left: 21%;
-  margin-right: 21%;
 }
 
 .continer_box {
